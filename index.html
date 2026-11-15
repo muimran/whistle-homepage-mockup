@@ -96,10 +96,11 @@ html, body { overflow-x: clip; }
 
 /* Phones and small tablets */
 @media (max-width: 860px) {
-  .hp-lead { padding: 0 0 36px; }
-  .hp-lead .hp-wrap { padding: 0; }
-  .hp-lead-card { grid-template-columns: 1fr; gap: 20px; }
-  .hp-lead-text { padding: 0 16px; gap: 10px; }
+  /* the same 20px side margins everywhere; the lead photo sits inside them too */
+  .hp-wrap { padding: 0 20px; }
+  .hp-lead { padding: 8px 0 40px; }
+  .hp-lead-card { grid-template-columns: 1fr; gap: 18px; }
+  .hp-lead-text { gap: 10px; }
   .hp .hp-lead h2 { font-size: 28px; line-height: 1.35; }
   .hp .hp-lead p { font-size: 16px; line-height: 1.7; }
   .hp .hp-kicker { font-size: 14px; }
