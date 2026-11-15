@@ -25,6 +25,11 @@ html, body { overflow-x: clip; }
 .header-area { min-height: 76px; }
 @media (max-width: 991.98px) { .header-area { min-height: 58px; } }
 
+/* Fix for a one-frame flash when the menu pins: the site's drop-down animation
+   (fadeInDown) had no fill mode, so the menu showed fully for a frame before the
+   animation hid it and slid it in. "both" applies the hidden start straight away. */
+.sticky.main-menu { animation-fill-mode: both; will-change: transform, opacity; }
+
 .hp {
   --ink: #1a1a1a;
   --body: #3d3d3d;
